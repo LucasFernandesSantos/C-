@@ -1,0 +1,22 @@
+﻿--INSTRUÇOES SOBRE O ENTITY FREMEWORK .NET CORE--
+
+1 - Instalar o Microsoft.EntityFremeworkCore.SqlServer 2.1.11
+- Install-Packge  Microsoft.EntityFremeworkCore.SqlServer -Version: 2.1.11
+
+2 - Criar as classes de modelo
+3 - Criar as classe de contexto
+ -Herença do DbContext
+ -Criar todos os DbSet<>
+ -Criar o construtor de acordo com o exemplo
+
+ 4 - Criar a string de conexao com o banco no arquivo appsettings.json
+
+ 5-Configurar a injeçao de dependencia no arquivo Startup.cs
+
+ 6- nao e necessario habilitar as migraçoes
+
+ 7-Adiciona uma migraçoao
+  - Add-Migration
+  
+ 8-Dar um update no console
+  -update-database

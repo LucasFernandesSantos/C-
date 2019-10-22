@@ -1,0 +1,53 @@
+﻿@model List<Produto>
+@{
+
+    DateTime data = ViewBag.DataHora;
+ 
+}
+
+
+   
+    
+        <h2>Gerenciamento de Produtos</h2>
+        <br /><a asp-action="Cadastrar" class="btn btn-info">Cadastrar Produto</a><br /><br />
+        <table class="table table-hover ">
+            <thead>
+                <tr class="table-success">
+                    <th>Nome</th>
+                    <th>Descriçao</th>
+                    <th>Preço</th>
+                    <th>Quantidade</th>
+                    <th>Criado em</th>
+                    <th>Remover</th>
+                    <th>Editar</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr class="table-primary">
+
+                        <td>@item.Nome</td>
+                        <td>@item.Descricao</td>
+                        <td>@item.Preco.ToString("C2")</td>
+                        <td>@item.Quantidade</td>
+                        <td>@item.CriadoEm</td>
+                        <td>
+                            <a asp-action="Remover" asp-route-id="@item.ProdutoId" class="btn btn-danger">Remover</a>
+                        </td>
+                        <td>
+                            <a asp-action="Alterar" asp-route-id="@item.ProdutoId" class="btn btn-warning">Alterar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <p>
+            <b>Dados atualizados em:</b> @data
+        </p>
+
+
+    @*Rodapé*@
+
+    
+

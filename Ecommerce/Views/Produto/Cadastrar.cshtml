@@ -1,0 +1,33 @@
+﻿@{
+    
+}
+
+@model Produto
+    <meta name="viewport" content="width=device-width" />
+    <title>Cadastrar</title>
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+    <h2>Cadastrar</h2>
+    <form asp-action="Cadastrar">
+
+        <div class="form-group">
+            <label>Nome:</label><br />
+            <input type="text" class="form-control col-md-3" asp-for="Nome" required="">
+        </div>
+        <div class="form-group">
+            <label >Descrição:</label><br />
+            <input type="text" class="form-control col-md-3" asp-for="Descricao" required="">
+        </div>
+        <div class="form-group">
+            <label>Preço:</label><br />
+            <input type="text" class="form-control col-md-3" asp-for="Preco"  required="">
+        </div>
+
+        <div class="form-group">
+            <label >Quantidade:</label><br />
+            <input type="text" class="form-control col-md-3" asp-for="Quantidade"  required="">
+        </div>
+        <input type="submit" value="Cadastrar" class=" btn btn-outline-success btn-lg" />
+
+
+    </form>
+
